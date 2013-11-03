@@ -1,0 +1,9 @@
+{
+  "modules" : { 
+    "veralite": {
+      "description": "Communique avec la box domotique Vera Lite",
+      "version"    : "1.1",
+      "IP_Vera"     : "192.168.2.110"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div id="veralite">  
+	<div class="span11">
+		<p>SARAH communique avec la box domotique Vera lite</p>
+		<p>Version expérimentale !</p>
+		<p>N'oubliez pas de mettre l'IP de votre vera dans le fichier veralite.prop!</p>
+		<h4><u>Ce plugin permet les actions suivantes:</u></h4>
+		<ul>
+			<li>Allumer ou éteindre un module ON/OFF sur la Véra</li>
+			<li>Modifier la luminosité d'un module variateur</li>
+			<li>Déclencher une scène par son numéro</li>
+			<li>Interroger un capteur de température</li>
+			<li>Interroger l'état d'un module ON/OFF</li>
+		</ul>
+        <h4><u>Example de commande a donner :</u></h4>
+        <ul>
+            <li><b>Sarah allume la lampe du salon s'il te plait</b></li>
+            <li><b>Sarah quel est la température de la piscine ?</b></li>			
+            <li><b>Sarah ouvre le portail</b></li>
+        </ul>
+		<p>La grammaire et les modules de la Véra sont déclarés dans le fichier veralite.xml</p>
+		<p>En fonction des phrases, on distingue les actions "SET" des interrogations "GET"</p>
+		<P>Chaque module de la vera est codé suivant son periphId et un numéro de périphérique:</p>
+		<ul>
+			<li> periphType="1" : Module ON/OFF</li>
+			<li> periphType="2" : Variateur</li>
+			<li> periphType="3" : Scene</li>
+			<li> periphType="4" : Sonde de température</li>
+			<li> periphType="5" : Sonde d'hygromètrie</li>
+			<li> periphType="6" : Sonde de luminosité</li>
+		</ul>
+	</div> 
+</div>

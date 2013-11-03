@@ -1,0 +1,10 @@
+
+.plugin-gridster.veralite .front {
+  background: #ffffff url('images/logo.jpg') center 34px;
+  background-size:   82px 91px;
+  background-repeat: no-repeat;
+}
+
+.plugin-gridster.veralite .back {
+  background: #ffffff;
+}
