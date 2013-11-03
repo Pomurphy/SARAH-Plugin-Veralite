@@ -89,8 +89,8 @@ var get = function(data, callback, config){
 	case '6':
     // Build URL luminosité
     var url = 'http://'+ip+':3480/data_request?id=variableget&DeviceNum='+data.periphId+'&serviceId=urn:micasaverde-com:serviceId:LightSensor1&Variable=CurrentLevel';
-    var prefixtts =  'le taux de luminosité est de ';
-	var suffixtts = ' pour cent';
+    var prefixtts =  'le luminosité est de ';
+	var suffixtts = ' luxe';
 	// Send Request
     var request = require('request');
     request({ 'uri': url, 'json': true }, function (err, response, body){
