@@ -5,53 +5,69 @@
 	
 	<!--         periphType           -->
 	<!-- "1" : ON/OFF                 -->
-	<!-- "2" : Variateur              -->
+	<!-- "2" : Variateur Lampe        -->
 	<!-- "3" : Scene                  -->
 	<!-- "4" : Sonde de température   -->
 	<!-- "5" : Sonde d'Hygrometrie    -->
-	<!-- "6" : Sonde de luminosité       -->
+	<!-- "6" : Sonde de lumière       -->
+	<!-- "7" : Sonde de consommation  -->
+	<!-- "8" : DoorLock		          -->
+	<!-- "9" : Volets		          -->
+	<!-- "10" : Virtual switch        -->
+	
+	<!--         periphValue          -->
+	<!-- 0 : OFF / Fermeture          -->
+	<!-- 1 : ON / ouverture           -->
+	<!-- 2 : Variation                -->
+
 	
     <item>Sarah</item>
-    <one-of>
-      <item>allume<tag>out.action.request="set";out.action.periphValue=1;</tag></item>
-      <item>éteint<tag>out.action.request="set";out.action.periphValue=0;</tag></item>
-      <item>ouvre<tag>out.action.request="set";out.action.periphValue=1;</tag></item>
-      <item>ferme<tag>out.action.request="set";out.action.periphValue=0;</tag></item>
-	  <item>regle<tag>out.action.request="set";</tag></item>
-	  <item>quelle est<tag>out.action.request="get";</tag></item>
-	  <item>comment est<tag>out.action.request="get";</tag></item>
-	  <item>donne moi<tag>out.action.request="get";</tag></item>
-    </one-of>
-    <one-of>
-      <item>la salle s'il te plait<tag>out.action.periphId=206;out.action.periphType="1";</tag></item>
-      <item>le salon s'il te plait<tag>out.action.periphId=208;out.action.periphType="1";</tag></item>
-	  <item>la cuisine s'il te plait<tag>out.action.periphId=223;out.action.periphType="1";</tag></item>
-	  <item>le couloir s'il te plait<tag>out.action.periphId=238;out.action.periphType="1";</tag></item>
-	  <item>la lumière d'ambiance s'il te plait<tag>out.action.periphId=1;out.action.periphType="3";</tag></item>
-	  <item>dehors s'il te plait<tag>out.action.periphId=239;out.action.periphType="1";</tag></item>
-	  <item>la lampe du bar s'il te plait<tag>out.action.periphId=213;out.action.periphType="1";</tag></item>
-	  <item>la lampe de la cheminée s'il te plait<tag>out.action.periphId=212;out.action.periphType="1";</tag></item>
-	  <item>la temperature de la maison<tag>out.action.periphId=214;out.action.periphType="4";</tag></item>
-	  <item>la temperature de la piscine<tag>out.action.periphId=157;out.action.periphType="4";</tag></item>
-	  <item>le taux d'humidité<tag>out.action.periphId=215;out.action.periphType="5";</tag></item>
-	  <item>le taux de lumière<tag>out.action.periphId=000;out.action.periphType="6";</tag></item>
-	  <item>le portail s'il te plait<tag>out.action.periphId=54;out.action.periphType="3";</tag></item>
-	  <item>la lumière du couloir<tag>out.action.periphId=238;out.action.periphType="2";</tag></item>
-    </one-of>
+	
+		<one-of>
+			<item>allume<tag>out.action.request="set";out.action.periphValue=1;</tag></item>
+			<item>éteint<tag>out.action.request="set";out.action.periphValue=0;</tag></item>
+			<item>ouvre<tag>out.action.request="set";out.action.periphValue=1;</tag></item>
+			<item>ferme<tag>out.action.request="set";out.action.periphValue=0;</tag></item>
+			<item>regle<tag>out.action.request="set";out.action.periphValue=2;</tag></item>
+			<item>Lance la scène<tag>out.action.request="set";out.action.periphId=206;out.action.periphType="3";</tag></item>
+			<item>quelle est<tag>out.action.request="get";</tag></item>
+			<item>comment est<tag>out.action.request="get";</tag></item>
+			<item>donne moi<tag>out.action.request="get";</tag></item>
+		</one-of>
+		
+	<item repeat="0-1" weight="1.5">
+		<one-of>
+			<item>la salle s'il te plait<tag>out.action.periphId=206;out.action.periphType="1";</tag></item>
+			<item>le salon s'il te plait<tag>out.action.periphId=208;out.action.periphType="1";</tag></item>
+			<item>la cuisine s'il te plait<tag>out.action.periphId=223;out.action.periphType="1";</tag></item>
+			<item>la lumière du couloir<tag>out.action.periphId=238;out.action.periphType="2";</tag></item>
+			<item>la lumière d'ambiance s'il te plait<tag>out.action.periphId=1;out.action.periphType="10";</tag></item>
+			<item>dehors s'il te plait<tag>out.action.periphId=239;out.action.periphType="1";</tag></item>
+			<item>la lampe du bar s'il te plait<tag>out.action.periphId=213;out.action.periphType="1";</tag></item>
+			<item>la lampe de la cheminée s'il te plait<tag>out.action.periphId=212;out.action.periphType="1";</tag></item>
+			<item>la temperature de la maison<tag>out.action.periphId=214;out.action.periphType="4";</tag></item>
+			<item>la temperature de la piscine<tag>out.action.periphId=157;out.action.periphType="4";</tag></item>
+			<item>le taux d'humidité<tag>out.action.periphId=215;out.action.periphType="5";</tag></item>
+			<item>le taux de lumière<tag>out.action.periphId=000;out.action.periphType="6";</tag></item>
+			<item>le portail s'il te plait<tag>out.action.periphId=54;out.action.periphType="3";</tag></item>
+			<item>les volets du salon<tag>out.action.periphId=238;out.action.periphType="9";</tag></item>
+			<item>les volets de la salle<tag>out.action.periphId=246;out.action.periphType="10";</tag></item>
+		</one-of>
+	</item>	
 
 	<item repeat="0-1" weight="1.2">
-	<one-of>
-		<item>dix pour cent<tag>out.action.value="10"</tag></item>
-		<item>vingt pour cent<tag>out.action.value="20"</tag></item>
-		<item>trente pour cent<tag>out.action.value="30"</tag></item>
-		<item>quarante pour cent<tag>out.action.value="40"</tag></item>
-		<item>cinquante pour cent<tag>out.action.value="50"</tag></item>
-		<item>soixante pour cent<tag>out.action.value="60"</tag></item>
-		<item>soixante dix pour cent<tag>out.action.value="70"</tag></item>
-		<item>quatre vingt pour cent<tag>out.action.value="80"</tag></item>
-		<item>quatre vingt dix pour cent<tag>out.action.value="90"</tag></item>
-		<item>cent pour cent<tag>out.action.value="100"</tag></item>
-    </one-of>
+		<one-of>
+			<item>dix pour cent<tag>out.action.value="10"</tag></item>
+			<item>vingt pour cent<tag>out.action.value="20"</tag></item>
+			<item>trente pour cent<tag>out.action.value="30"</tag></item>
+			<item>quarante pour cent<tag>out.action.value="40"</tag></item>
+			<item>cinquante pour cent<tag>out.action.value="50"</tag></item>
+			<item>soixante pour cent<tag>out.action.value="60"</tag></item>
+			<item>soixantedix pour cent<tag>out.action.value="70"</tag></item>
+			<item>quatrevingt pour cent<tag>out.action.value="80"</tag></item>
+			<item>quatrevingt dix pour cent<tag>out.action.value="90"</tag></item>
+			<item>cent pour cent<tag>out.action.value="100"</tag></item>
+		</one-of>
 	</item>
 	
     <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/veralite";</tag>

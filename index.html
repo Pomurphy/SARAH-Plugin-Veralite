@@ -6,9 +6,11 @@
 		<h4><u>Ce plugin permet les actions suivantes:</u></h4>
 		<ul>
 			<li>Allumer ou éteindre un module ON/OFF sur la Véra</li>
+			<li>commander un module Virtual Switch sur la Véra</li>
 			<li>Modifier la luminosité d'un module variateur</li>
+			<li>Controler un volet</li>
 			<li>Déclencher une scène par son numéro</li>
-			<li>Interroger un capteur de température</li>
+			<li>Interroger un capteur</li>
 			<li>Interroger l'état d'un module ON/OFF</li>
 		</ul>
         <h4><u>Example de commande a donner :</u></h4>
@@ -16,17 +18,22 @@
             <li><b>Sarah allume la lampe du salon s'il te plait</b></li>
             <li><b>Sarah quel est la température de la piscine ?</b></li>			
             <li><b>Sarah ouvre le portail</b></li>
+			<li><b>Sarah règle la lumière du couloir à 60%</b></li>
         </ul>
 		<p>La grammaire et les modules de la Véra sont déclarés dans le fichier veralite.xml</p>
 		<p>En fonction des phrases, on distingue les actions "SET" des interrogations "GET"</p>
 		<P>Chaque module de la vera est codé suivant son periphId et un numéro de périphérique:</p>
 		<ul>
 			<li> periphType="1" : Module ON/OFF</li>
-			<li> periphType="2" : Variateur</li>
+			<li> periphType="2" : Variateur de lumière</li>
 			<li> periphType="3" : Scene</li>
 			<li> periphType="4" : Sonde de température</li>
 			<li> periphType="5" : Sonde d'hygromètrie</li>
 			<li> periphType="6" : Sonde de luminosité</li>
+			<li> periphType="7" : Sonde de Consommation</li>
+			<li> periphType="8" : Module DoorLock</li>
+			<li> periphType="9" : Volets</li>
+			<li> periphType="10" : Virtual Switch</li>
 		</ul>
 	</div> 
 </div>
