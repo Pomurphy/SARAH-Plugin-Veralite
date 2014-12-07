@@ -145,7 +145,7 @@ var getvirtsw = function(data, callback, config){
 //  GET TRIPPED STATUS
 // ==========================================
 
-var getdoorlock = function(data, callback, config){ 
+var gettripped = function(data, callback, config){ 
 	var ip  = config.IP_Vera;
  
     // Build URL status doorlock
