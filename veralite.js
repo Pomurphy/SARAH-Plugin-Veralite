@@ -78,6 +78,9 @@ var config = config.modules.veralite;
 		case '10':
 			getvirtsw(data, callback, config);
 		break;
+		case '11':
+			gettripped(data, callback, config);
+		break;
 		default:
 		callback({ 'tts': 'Je ne comprend pas !' });
 		};
@@ -136,6 +139,32 @@ var getvirtsw = function(data, callback, config){
     callback({ 'tts': tts });
     });	
 };
+
+
+// ==========================================
+//  GET TRIPPED STATUS
+// ==========================================
+
+var getdoorlock = function(data, callback, config){ 
+	var ip  = config.IP_Vera;
+ 
+    // Build URL status doorlock
+    var url = 'http://'+ip+':3480/data_request?id=variableget&DeviceNum=50&serviceId=urn:micasaverde-com:serviceId:SecuritySensor1&Variable=Tripped';
+	// Send Request
+    var request = require('request');
+    request({ 'uri': url, 'json': true }, function (err, response, body){
+    if (err || response.statusCode != 200) {
+      callback({'tts': "L'action a échoué"});
+      return;
+    }
+	if (body == '0'){
+		suffixtts = 'fermée !'}
+		else {suffixtts = 'ouverte !'}
+    tts = 'Elle est '+suffixtts;
+	//Callback with TTS
+    callback({ 'tts': tts });
+    });	
+}
 
 // ==========================================
 //  GET STATUT VARIATEUR
