@@ -14,7 +14,7 @@
 	<!-- "8" : DoorLock		          -->
 	<!-- "9" : Volets		          -->
 	<!-- "10" : Virtual switch        -->
-	
+	<!-- "11" : Security Switch       -->
 	<!--         periphValue          -->
 	<!-- 0 : OFF / Fermeture          -->
 	<!-- 1 : ON / ouverture           -->
@@ -43,6 +43,7 @@
 			<item>la lumière du couloir<tag>out.action.periphId=238;out.action.periphType="2";</tag></item>
 			<item>la lumière d'ambiance s'il te plait<tag>out.action.periphId=1;out.action.periphType="10";</tag></item>
 			<item>dehors s'il te plait<tag>out.action.periphId=239;out.action.periphType="1";</tag></item>
+			<item>la porte de la cuisine<tag>out.action.periphId=150;out.action.periphType="11";</tag></item>
 			<item>la lampe du bar s'il te plait<tag>out.action.periphId=213;out.action.periphType="1";</tag></item>
 			<item>la lampe de la cheminée s'il te plait<tag>out.action.periphId=212;out.action.periphType="1";</tag></item>
 			<item>la temperature de la maison<tag>out.action.periphId=214;out.action.periphType="4";</tag></item>
